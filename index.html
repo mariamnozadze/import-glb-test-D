@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>a frame -test D</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ar.js@2.2.0/build/aframe-ar.js"></script>
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
     <style>
       #toggle-button{
         z-index: 999;
@@ -51,8 +50,6 @@
       <a-scene
         vr-mode-ui="enabled: true"
         loading-screen="false"
-        arjs="sourceType: webcam; debugUIEnabled: false;"
-        vr-mode-ui="enabled: true"
         >
         <a-assets>
           <!-- Import the GLB files -->
@@ -90,10 +87,6 @@
     </div>
 
     <script>
-      function toggleVisibility() {
-        var model1 = document.querySelector("#model1");
-        model1.setAttribute("visible", !model1.getAttribute("visible"));
-      }
   
       function showAFrame() {
         var startButton = document.getElementById("start-button");
@@ -101,6 +94,10 @@
   
         startButton.style.display = "none";
         aframeContainer.style.display = "block";
+      }
+      function toggleVisibility() {
+        var model1 = document.querySelector("#model1");
+        model1.setAttribute("visible", !model1.getAttribute("visible"));
       }
     </script>
   </body>
