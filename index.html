@@ -3,21 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test D</title>
+    <title>a frame -test D</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ar.js@2.2.0/build/aframe-ar.js"></script>
-    <script src="toggle.js"></script>
+    <script src="main.js"></script>
     <style>
-      #toggle-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        background-color: #fff;
-        transform: translate(-50%, -150px);
-        padding: 10px 20px;
+      #toggle-button{
         z-index: 999;
       }
 
@@ -70,9 +61,9 @@
         </a-assets>
 
         <!-- Cut button -->
-        <button id="toggle-button" class="button" onclick="toggleVisibility()">
-          CUT
-        </button>
+        <a-entity id="toggle-button" class="button" onclick="toggleVisibility()">
+          <a-text id="cut-btn" value="CUT" color="#FFF" position="-0.2 2.4 -0.5"></a-text>
+        </a-entity> 
 
         <a-entity
           id="model1"
